@@ -28,7 +28,10 @@ public class RBStore {
 
     // https://github.com/getrebuild/rebuild-datas/
     private static final String DATA_REPO = BootEnvironmentPostProcessor.getProperty(
-            ConfigurationItem.RbStoreUrl.name(), "https://getrebuild.com/gh/getrebuild/rebuild-datas/");
+            ConfigurationItem.RbStoreUrl.name(), 
+            // "https://getrebuild.com/gh/getrebuild/rebuild-datas/"
+            "https://github.com/chnghia/rebuild-datas/raw/b39a5bd3c1af57ef80b74744aea44443311187cb/"
+            );
 
     /**
      * for Classification
@@ -64,6 +67,7 @@ public class RBStore {
         }
 
         try {
+            log.info(fileUrl);
             String content = OkHttpUtils.get(fileUrl);
             if (JSONUtils.wellFormat(content)) {
                 return (JSON) JSON.parse(content, Feature.OrderedField);
