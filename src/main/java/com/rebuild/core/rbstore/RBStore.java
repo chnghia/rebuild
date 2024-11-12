@@ -30,7 +30,7 @@ public class RBStore {
     private static final String DATA_REPO = BootEnvironmentPostProcessor.getProperty(
             ConfigurationItem.RbStoreUrl.name(), 
             // "https://getrebuild.com/gh/getrebuild/rebuild-datas/"
-            "https://github.com/chnghia/rebuild-datas/raw/b39a5bd3c1af57ef80b74744aea44443311187cb/"
+            "https://raw.githubusercontent.com/chnghia/rebuild-datas/refs/heads/master/"
             );
 
     /**
